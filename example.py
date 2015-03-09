@@ -1,5 +1,5 @@
 import numpy as np
-from SMOTED import SMOTE
+from SMOTE import SMOTE
 import matplotlib.pyplot as plt
 
 n_rows = 30
