@@ -1,3 +1,6 @@
+# Author: Dave Rivera <daverivera90@gmail.com>
+#         Julian David Arias Londoño  <jdarias@udea.edu.co>
+
 from sklearn.neighbors import NearestNeighbors
 import numpy as np
 

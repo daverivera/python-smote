@@ -1,3 +1,6 @@
+# Author: Dave Rivera <daverivera90@gmail.com>
+#         Julian David Arias Londoño  <jdarias@udea.edu.co>
+
 import numpy as np
 from SMOTE import SMOTE
 import matplotlib.pyplot as plt
