@@ -58,7 +58,6 @@ class SMOTE():
         # for i in range (0, self.n_samps-1):
         for i in rand_indexes[:self.n_synth]:
             nnarray = nearest_k.kneighbors(self.samples[i], return_distance=False)[0]
-            print('Vecinos Cerc: ', nnarray)
             self.__populate(i, nnarray)            
 
         return self.syntethic
