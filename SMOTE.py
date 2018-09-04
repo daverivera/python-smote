@@ -50,7 +50,7 @@ class SMOTE():
         rand_indexes = np.random.permutation(self.n_samps)
         if self.N > 100:
             self.N = np.ceil(self.N/100)
-            for i in range(N-1):
+            for i in range(self.N-1):
                 rand_indexes = np.apend(rand_indexes, random.permutation(n_samps))
         
         self.syntethic = np.zeros((self.n_synth, self.n_attrs));
