@@ -1,3 +1,6 @@
+# Author: Dave Rivera <daverivera90@gmail.com>
+#         Julian David Arias Londoño  <jdarias@udea.edu.co>
+
 from sklearn.neighbors import NearestNeighbors
 import numpy as np
 
@@ -47,7 +50,7 @@ class SMOTE():
         rand_indexes = np.random.permutation(self.n_samps)
         if self.N > 100:
             self.N = np.ceil(self.N/100)
-            for i in range(N-1):
+            for i in range(self.N-1):
                 rand_indexes = np.apend(rand_indexes, random.permutation(n_samps))
         
         self.syntethic = np.zeros((self.n_synth, self.n_attrs));
@@ -58,7 +61,6 @@ class SMOTE():
         # for i in range (0, self.n_samps-1):
         for i in rand_indexes[:self.n_synth]:
             nnarray = nearest_k.kneighbors(self.samples[i], return_distance=False)[0]
-            print('Vecinos Cerc: ', nnarray)
             self.__populate(i, nnarray)            
 
         return self.syntethic
